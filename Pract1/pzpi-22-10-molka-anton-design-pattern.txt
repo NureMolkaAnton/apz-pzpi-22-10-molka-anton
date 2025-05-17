@@ -1,1 +1,301 @@
-﻿
+﻿Харківський національний університет радіоелектроніки
+
+Кафедра програмної інженерії
+
+
+
+
+
+
+Звіт
+З Практичної роботи № 1.
+«Патерн проєктування Facade»
+
+з дисципліни «Архітектура програмного забезпечення» 
+
+
+
+
+
+Виконав:             		Перевірив:
+студент гр. ПЗПІ 22-10  	Старший викладач каф. ПІ
+Молька Антон Васильович		Сокорчук  І. П.
+
+
+
+
+
+Харків 2025
+ІСТОРІЯ ЗМІН
+
+№	Дата	Версія звіту	Опис змін та виправлень
+1	16.05.2025	0.1	Створення розділів: «Завдання», «Опис виконаної роботи», «Висновки»
+2	17.05.2025	0.2	Розроблено слайди преезнтації, додано їх в Додаток Б та додано посилання на відеозапис доповіді з хронологічним описом
+ 
+ЗАВДАННЯ
+
+1.	Підготувати доповідь на тему «Патерн проєктування Facade». 
+2.	Створити та оформити слайди презентації доповіді
+3.	Створити та опублікувати на YouTube відеозапис доповіді
+4.	Оформити та завантажити на dl.nure.ua звіт до виконаної роботи
+5.	При потребі створити та налаштувати у GitHub обліковий запис для облікового запису студента в домені @nure.ua
+6.	Створити для виконання завдань з дисципліни GitHub репозиторій iз вказаним на https://dl.nure.ua іменем та з головною гілкою main
+7.	Створити у корені створеного репозиторію файл README.md з вказаним далі змістом та вказані далі директорії для окремих завдань
+8.	Експортувати звіт у файл у простому текстововому форматі та завантажити цей файл у директорію Pract1 у репозиторії GitHub
+9.	Завантажити у вказану далі піддиректорію увесь програмний код, який розглядається у доповіді ПЗ1
+ 
+ОПИС ВИКОНАНОЇ РОБОТИ
+
+У процесі вивчення теми "Патерн проєктування Facade" було проведено детальний аналіз цього структурного шаблону, визначеного в книзі "Design Patterns: Elements of Reusable Object-Oriented Software" (Gamma et al., 1994). Було розглянуто призначення та принципи роботи Facade, зокрема його роль як уніфікованого інтерфейсу, що спрощує взаємодію зі складними підсистемами, такими як мережеві бібліотеки, бази даних чи компілятори.
+Досліджено механізм роботи патерну, який полягає в інкапсуляції складної логіки підсистеми та наданні клієнту єдиної точки доступу. Було проаналізовано, як Facade зменшує залежності між клієнтським кодом і підсистемою, сприяючи модульності, читабельності та легкості підтримки програмного забезпечення. Особливу увагу приділено прикладу компілятора з книги GoF, де клас Compiler координує компоненти (Scanner, Parser, CodeGenerator, ProgramNodeBuilder), а також спрощеним кодам, натхненним мережевою підсистемою, які демонструють роботу без Facade (NoFacadeNecko.cpp) і з ним (NsIOServiceFacade.cpp).
+Окрім цього, було проведено порівняльний аналіз клієнтського коду з використанням Facade і без нього, що дозволило наочно продемонструвати зменшення складності та обсягу коду завдяки патерну. Вивчено сильні сторони Facade, зокрема його здатність спрощувати розробку, ізолювати зміни в підсистемі та сприяти повторному використанню коду, а також слабкі сторони, такі як ризик створення "об’єкта-бога" чи обмеження доступу до специфічних функцій. Було досліджено зв’язок Facade з іншими патернами, такими як Abstract Factory, Mediator і Singleton, що підкреслює його гнучкість у комбінованих архітектурах.
+Цей аналіз дозволив отримати комплексне розуміння патерну Facade як фундаментального інструменту в проєктуванні програмного забезпечення, що забезпечує створення інтуїтивних і ефективних API, сприяючи масштабованості та інноваціям у розробці сучасних систем.
+ 
+ВИСНОВКИ
+
+У даній презентації проведено детальний аналіз патерну проєктування Facade, що підкреслив його роль як ключового структурного шаблону для спрощення взаємодії зі складними системами. Визначено, що Facade забезпечує уніфікований інтерфейс, приховуючи внутрішню складність підсистем, починаючи від низькорівневих компонентів, таких як обробники даних, і завершуючись високорівневими API для клієнтських додатків.
+Гнучкість і простота патерну дозволяють ефективно застосовувати його в різноманітних проєктах – від мережевих бібліотек і баз даних до графічних фреймворків і компіляторів, знижуючи поріг входу для розробників і сприяючи створенню читабельного та підтримуваного коду. Незважаючи на виклики, пов’язані з потенційним ризиком створення "об’єкта-бога" чи обмеженням доступу до специфічних функцій підсистеми, постійне вдосконалення підходів до реалізації Facade – зокрема створення вузьких фасадів і комбінація з іншими патернами, такими як Mediator чи Abstract Factory – демонструє його адаптивність і практичну цінність.
+Поєднання єдиного інтерфейсу, ізоляції клієнтського коду від змін у підсистемі, зручності для розробників і гнучкості у проєктуванні забезпечує Facade провідну роль у розробці сучасного програмного забезпечення, гарантуючи ефективну інтеграцію складних систем і створення інтуїтивних API для широкого спектра застосувань.
+ 
+ДОДАТОК А
+
+Відеозапис доповіді на YouTube: https://youtu.be/AHf7q-W6ydY  
+00:00 - Intro
+00:17 - Що таке патерн Facade?
+00:51 - Проблема, яку вирішує Facade
+01:25 - Як працює Facade
+03:00 - Якщо не використовувати Facade
+04:44 - Як Facade вирішує проблему
+05:38 - Порівняння
+06:17 - Переваги і недоліки 
+07:06 - Пов’язані патерни
+07:41 - Висновки
+08:48 - Перелік використаних джерел
+09:51 - Дякую за увагу 
+ДОДАТОК Б
+ 
+Рисунок 1 –	Титульний слайд
+
+ 
+Рисунок 2 –	Що таке патерн Facade
+
+
+ 
+Рисунок 3 –	Проблема, яку вирішує Facade
+ 
+Рисунок 4 –	Як працює Facade
+
+ 
+Рисунок 5 –	Якщо не використовувати Facade
+ 
+Рисунок 6 –	Як Facade вирішує проблему
+
+ 
+Рисунок 7 –	Порівняння
+
+ 
+Рисунок 8 –	Переваги і недоліки
+
+ 
+Рисунок 9 –	Пов’язані патерни
+
+ 
+Рисунок 10 –	Висновки
+
+
+ 
+Рисунок 11 –	Перелік використаних джерел
+ 
+Рисунок 12 –	Патерни взаємодії компонентів Android
+ДОДАТОК В
+Приклад коду з використанням Facade
+1  #include <string>
+2  #include <map>
+3  #include <stdexcept>
+4  #include <iostream>
+5  
+6  struct LoadInfo {
+7      std::string securityLevel;
+8  };
+9  
+10  class Channel {
+11  public:
+12      Channel(const std::string& uri, const std::string& type)
+13          : uri_(uri), type_(type) {}
+14  
+15      void Configure(const LoadInfo& loadInfo) {
+16          std::cout << "Configuring channel for " << uri_
+17                    << " with security: " << loadInfo.securityLevel << std::endl;
+18      }
+19  
+20      std::string GetUri() const { return uri_; }
+21      std::string GetType() const { return type_; }
+22  
+23  private:
+24      std::string uri_;
+25      std::string type_;
+26  };
+27  
+28  class ProtocolHandler {
+29  public:
+30      virtual ~ProtocolHandler() {}
+31      virtual Channel* CreateChannel(const std::string& uri, const LoadInfo& loadInfo) = 0;
+32  };
+33  
+34  class HttpProtocolHandler : public ProtocolHandler {
+35  public:
+36      Channel* CreateChannel(const std::string& uri, const LoadInfo& loadInfo) override {
+37          std::cout << "Creating HTTP channel for " << uri << std::endl;
+38          return new Channel(uri, "http");
+39      }
+40  };
+41  
+42  class FileProtocolHandler : public ProtocolHandler {
+43  public:
+44      Channel* CreateChannel(const std::string& uri, const LoadInfo& loadInfo) override {
+45          std::cout << "Creating file channel for " << uri << std::endl;
+46          return new Channel(uri, "file");
+47      }
+48  };
+49  
+50  class NsIOService {
+51  public:
+52      NsIOService() {
+53          handlers_["http"] = new HttpProtocolHandler();
+54          handlers_["file"] = new FileProtocolHandler();
+55      }
+56  
+57      ~NsIOService() {
+58          for (auto& pair : handlers_) {
+59              delete pair.second;
+60          }
+61      }
+62  
+63      // Facade метод для створення каналу
+64      Channel* NewChannel(const std::string& uri, const LoadInfo& loadInfo) {
+65          // 1. Визначити схему URI
+66          size_t pos = uri.find("://");
+67          if (pos == std::string::npos) {
+68              throw std::runtime_error("Invalid URI");
+69          }
+70          std::string scheme = uri.substr(0, pos);
+71  
+72          // 2. Отримати обробник протоколу
+73          auto it = handlers_.find(scheme);
+74          if (it == handlers_.end()) {
+75              throw std::runtime_error("No handler for scheme: " + scheme);
+76          }
+77  
+78          // 3. Створити канал
+79          Channel* channel = it->second->CreateChannel(uri, loadInfo);
+80  
+81          // 4. Налаштувати канал
+82          channel->Configure(loadInfo);
+83  
+84          return channel;
+85      }
+86  
+87  private:
+88      std::map<std::string, ProtocolHandler*> handlers_;
+89  };
+90  
+91  // Використання Facade клієнтом
+92  int main() {
+93      NsIOService ioService;
+94      LoadInfo loadInfo{ "high" };
+95      try {
+96          Channel* channel = ioService.NewChannel("http://example.com", loadInfo);
+97          std::cout << "Created channel: " << channel->GetUri()
+98                    << ", type: " << channel->GetType() << std::endl;
+99          delete channel;
+100     } catch (const std::exception& e) {
+101         std::cerr << "Error: " << e.what() << std::endl;
+102     }
+103     return 0;
+104 }
+
+
+ 
+Приклад коду без використання Façade
+
+1  #include <string>
+2  #include <stdexcept>
+3  #include <iostream>
+4  
+5  struct LoadInfo {
+6      std::string securityLevel;
+7  };
+8  
+9  class Channel {
+10  public:
+11      Channel(const std::string& uri, const std::string& type)
+12          : uri_(uri), type_(type) {}
+13  
+14      void Configure(const LoadInfo& loadInfo) {
+15          std::cout << "Configuring channel for " << uri_
+16                    << " with security: " << loadInfo.securityLevel << std::endl;
+17      }
+18  
+19      std::string GetUri() const { return uri_; }
+20      std::string GetType() const { return type_; }
+21  
+22  private:
+23      std::string uri_;
+24      std::string type_;
+25  };
+26  
+27  class HttpProtocolHandler {
+28  public:
+29      Channel* CreateChannel(const std::string& uri, const LoadInfo& loadInfo) {
+30          std::cout << "Creating HTTP channel for " << uri << std::endl;
+31          return new Channel(uri, "http");
+32      }
+33  };
+34  
+35  class FileProtocolHandler {
+36  public:
+37      Channel* CreateChannel(const std::string& uri, const LoadInfo& loadInfo) {
+38          std::cout << "Creating file channel for " << uri << std::endl;
+39          return new Channel(uri, "file");
+40      }
+41  };
+42  
+43  // Використання без Facade
+44  int main() {
+45      LoadInfo loadInfo{ "high" };
+46      std::string uri = "http://example.com";
+47      Channel* channel = nullptr;
+48  
+49      try {
+50          // 1. Клієнт вручну визначає схему URI
+51          size_t pos = uri.find("://");
+52          if (pos == std::string::npos) {
+53              throw std::runtime_error("Invalid URI");
+54          }
+55          std::string scheme = uri.substr(0, pos);
+56  
+57          // 2. Клієнт вручну вибирає обробник протоколу
+58          if (scheme == "http") {
+59              HttpProtocolHandler handler;
+60              channel = handler.CreateChannel(uri, loadInfo);
+61          } else if (scheme == "file") {
+62              FileProtocolHandler handler;
+63              channel = handler.CreateChannel(uri, loadInfo);
+64          } else {
+65              throw std::runtime_error("No handler for scheme: " + scheme);
+66          }
+67  
+68          // 3. Клієнт вручну налаштовує канал
+69          channel->Configure(loadInfo);
+70  
+71          // 4. Використання каналу
+72          std::cout << "Created channel: " << channel->GetUri()
+73                    << ", type: " << channel->GetType() << std::endl;
+74  
+75          delete channel;
+76      } catch (const std::exception& e) {
+77          std::cerr << "Error: " << e.what() << std::endl;
+78      }
+79  
+80      return 0;
+81  }
