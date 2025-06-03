@@ -4,3 +4,6 @@
 [submodule "Lab3/ArkaNova"]
 	path = Lab3/ArkaNova
 	url = https://github.com/Kirixo/ArkaNova.git
+[submodule "Lab4/ArkaNova"]
+	path = Lab4/ArkaNova
+	url = https://github.com/Kirixo/ArkaNova.git
